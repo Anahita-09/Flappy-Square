@@ -1,0 +1,1336 @@
+[gd_scene format=3 uid="uid://qg57it5c55qe"]
+
+[ext_resource type="Script" uid="uid://stj877foetjl" path="res://player.gd" id="1_tlwt5"]
+[ext_resource type="Texture2D" uid="uid://br4vr5x2jfe5a" path="res://white_box.png" id="2_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://bu06ibsbn68lx" path="res://wallnode.tscn" id="3_036b0"]
+[ext_resource type="Texture2D" uid="uid://dodopvsyno7lj" path="res://blue_bg.jpeg" id="4_aqk2v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_804b1"]
+size = Vector2(39, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bb3i"]
+size = Vector2(45, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
+size = Vector2(85, 31.188726)
+
+[node name="World" type="Node2D" unique_id=2143431414]
+
+[node name="PlayerNode" type="Node2D" parent="." unique_id=1773804647]
+
+[node name="Player" type="CharacterBody2D" parent="PlayerNode" unique_id=2059654298]
+script = ExtResource("1_tlwt5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player" unique_id=1004495220]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_804b1")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerNode/Player" unique_id=313063610]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_aqk2v")
+
+[node name="Detect" type="Area2D" parent="PlayerNode/Player" unique_id=679884086]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player/Detect" unique_id=1057722114]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_8bb3i")
+
+[node name="Resetter" type="Area2D" parent="PlayerNode/Player" unique_id=55025161]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player/Resetter" unique_id=1930807181]
+position = Vector2(-634.5, -11.999992)
+scale = Vector2(0.7975111, 20.263731)
+shape = SubResource("RectangleShape2D_tlwt5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1053368568]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=260629018]
+follow_viewport_enabled = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=1152615134]
+offset_left = -48.0
+offset_top = -312.0
+offset_right = -8.0
+offset_bottom = -272.0
+scale = Vector2(2.2799993, 1)
+
+[node name="Walls" type="Node2D" parent="." unique_id=1885702433]
+
+[node name="Wallnode" parent="Walls" unique_id=918407377 instance=ExtResource("3_036b0")]
+position = Vector2(248, 0)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode2" parent="Walls" unique_id=1584818075 instance=ExtResource("3_036b0")]
+position = Vector2(544, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode3" parent="Walls" unique_id=2108344739 instance=ExtResource("3_036b0")]
+position = Vector2(808, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode4" parent="Walls" unique_id=63522861 instance=ExtResource("3_036b0")]
+position = Vector2(1032, -56)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode5" parent="Walls" unique_id=857607386 instance=ExtResource("3_036b0")]
+position = Vector2(1272.0001, 54)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode6" parent="Walls" unique_id=1334879282 instance=ExtResource("3_036b0")]
+position = Vector2(1712, -120)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode7" parent="Walls" unique_id=1363582510 instance=ExtResource("3_036b0")]
+position = Vector2(2008, -168)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode8" parent="Walls" unique_id=217661015 instance=ExtResource("3_036b0")]
+position = Vector2(2272, -112)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode9" parent="Walls" unique_id=511459068 instance=ExtResource("3_036b0")]
+position = Vector2(2496, -176)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode10" parent="Walls" unique_id=515322936 instance=ExtResource("3_036b0")]
+position = Vector2(2736, -66)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode11" parent="Walls" unique_id=1026881593 instance=ExtResource("3_036b0")]
+position = Vector2(3136, 128)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode12" parent="Walls" unique_id=1788743317 instance=ExtResource("3_036b0")]
+position = Vector2(3432, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode13" parent="Walls" unique_id=1401083936 instance=ExtResource("3_036b0")]
+position = Vector2(3696, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode14" parent="Walls" unique_id=504640307 instance=ExtResource("3_036b0")]
+position = Vector2(3920, 72)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode15" parent="Walls" unique_id=1398896564 instance=ExtResource("3_036b0")]
+position = Vector2(4160, 182)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode16" parent="Walls" unique_id=699860193 instance=ExtResource("3_036b0")]
+position = Vector2(4672, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode17" parent="Walls" unique_id=1271138286 instance=ExtResource("3_036b0")]
+position = Vector2(4968, -40)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode18" parent="Walls" unique_id=529150752 instance=ExtResource("3_036b0")]
+position = Vector2(5232, 16)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode19" parent="Walls" unique_id=400039212 instance=ExtResource("3_036b0")]
+position = Vector2(5456, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode20" parent="Walls" unique_id=1131588464 instance=ExtResource("3_036b0")]
+position = Vector2(5696, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode21" parent="Walls" unique_id=1426752487 instance=ExtResource("3_036b0")]
+position = Vector2(6208, 118)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode22" parent="Walls" unique_id=68590214 instance=ExtResource("3_036b0")]
+position = Vector2(6504, 70)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode23" parent="Walls" unique_id=2116137102 instance=ExtResource("3_036b0")]
+position = Vector2(6768, 126)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode24" parent="Walls" unique_id=796659997 instance=ExtResource("3_036b0")]
+position = Vector2(6992, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode25" parent="Walls" unique_id=555288188 instance=ExtResource("3_036b0")]
+position = Vector2(7232, 172)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode26" parent="Walls" unique_id=1063439678 instance=ExtResource("3_036b0")]
+position = Vector2(7792, -29)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode27" parent="Walls" unique_id=2049377339 instance=ExtResource("3_036b0")]
+position = Vector2(8088, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode28" parent="Walls" unique_id=999069521 instance=ExtResource("3_036b0")]
+position = Vector2(8352, -21)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode29" parent="Walls" unique_id=1243499328 instance=ExtResource("3_036b0")]
+position = Vector2(8576, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode30" parent="Walls" unique_id=251540704 instance=ExtResource("3_036b0")]
+position = Vector2(8816, 25)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode31" parent="Walls" unique_id=1520247628 instance=ExtResource("3_036b0")]
+position = Vector2(9336, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode32" parent="Walls" unique_id=1017802122 instance=ExtResource("3_036b0")]
+position = Vector2(9632, 88)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode33" parent="Walls" unique_id=452991081 instance=ExtResource("3_036b0")]
+position = Vector2(9896, 144)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode34" parent="Walls" unique_id=1600838063 instance=ExtResource("3_036b0")]
+position = Vector2(10120, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode35" parent="Walls" unique_id=1972207614 instance=ExtResource("3_036b0")]
+position = Vector2(10360, 190)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode36" parent="Walls" unique_id=1436578747 instance=ExtResource("3_036b0")]
+position = Vector2(10864, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode37" parent="Walls" unique_id=1363445351 instance=ExtResource("3_036b0")]
+position = Vector2(11160, -133)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode38" parent="Walls" unique_id=871596484 instance=ExtResource("3_036b0")]
+position = Vector2(11424, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode39" parent="Walls" unique_id=57686723 instance=ExtResource("3_036b0")]
+position = Vector2(11648, -141)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode40" parent="Walls" unique_id=1720412045 instance=ExtResource("3_036b0")]
+position = Vector2(11888, -31)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Walls2" type="Node2D" parent="." unique_id=588955656]
+position = Vector2(12176, 0)
+
+[node name="Wallnode" parent="Walls2" unique_id=339254260 instance=ExtResource("3_036b0")]
+position = Vector2(248, 0)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode2" parent="Walls2" unique_id=1130991043 instance=ExtResource("3_036b0")]
+position = Vector2(544, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode3" parent="Walls2" unique_id=1996014691 instance=ExtResource("3_036b0")]
+position = Vector2(808, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode4" parent="Walls2" unique_id=332068041 instance=ExtResource("3_036b0")]
+position = Vector2(1032, -56)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode5" parent="Walls2" unique_id=1583245107 instance=ExtResource("3_036b0")]
+position = Vector2(1272.0001, 54)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode6" parent="Walls2" unique_id=979659310 instance=ExtResource("3_036b0")]
+position = Vector2(1712, -120)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode7" parent="Walls2" unique_id=2002275309 instance=ExtResource("3_036b0")]
+position = Vector2(2008, -168)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode8" parent="Walls2" unique_id=102060577 instance=ExtResource("3_036b0")]
+position = Vector2(2272, -112)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode9" parent="Walls2" unique_id=318753337 instance=ExtResource("3_036b0")]
+position = Vector2(2496, -176)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode10" parent="Walls2" unique_id=1478547405 instance=ExtResource("3_036b0")]
+position = Vector2(2736, -66)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode11" parent="Walls2" unique_id=557249456 instance=ExtResource("3_036b0")]
+position = Vector2(3136, 128)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode12" parent="Walls2" unique_id=1639194811 instance=ExtResource("3_036b0")]
+position = Vector2(3432, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode13" parent="Walls2" unique_id=846424905 instance=ExtResource("3_036b0")]
+position = Vector2(3696, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode14" parent="Walls2" unique_id=1506884132 instance=ExtResource("3_036b0")]
+position = Vector2(3920, 72)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode15" parent="Walls2" unique_id=404332913 instance=ExtResource("3_036b0")]
+position = Vector2(4160, 182)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode16" parent="Walls2" unique_id=1615925717 instance=ExtResource("3_036b0")]
+position = Vector2(4672, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode17" parent="Walls2" unique_id=1609876702 instance=ExtResource("3_036b0")]
+position = Vector2(4968, -40)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode18" parent="Walls2" unique_id=1457414904 instance=ExtResource("3_036b0")]
+position = Vector2(5232, 16)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode19" parent="Walls2" unique_id=1430689527 instance=ExtResource("3_036b0")]
+position = Vector2(5456, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode20" parent="Walls2" unique_id=463719836 instance=ExtResource("3_036b0")]
+position = Vector2(5696, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode21" parent="Walls2" unique_id=1049089146 instance=ExtResource("3_036b0")]
+position = Vector2(6208, 118)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode22" parent="Walls2" unique_id=385229688 instance=ExtResource("3_036b0")]
+position = Vector2(6504, 70)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode23" parent="Walls2" unique_id=1094027315 instance=ExtResource("3_036b0")]
+position = Vector2(6768, 126)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode24" parent="Walls2" unique_id=553171203 instance=ExtResource("3_036b0")]
+position = Vector2(6992, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode25" parent="Walls2" unique_id=442443931 instance=ExtResource("3_036b0")]
+position = Vector2(7232, 172)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode26" parent="Walls2" unique_id=239956789 instance=ExtResource("3_036b0")]
+position = Vector2(7792, -29)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode27" parent="Walls2" unique_id=872012469 instance=ExtResource("3_036b0")]
+position = Vector2(8088, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode28" parent="Walls2" unique_id=1168821198 instance=ExtResource("3_036b0")]
+position = Vector2(8352, -21)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode29" parent="Walls2" unique_id=894261165 instance=ExtResource("3_036b0")]
+position = Vector2(8576, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode30" parent="Walls2" unique_id=2062103056 instance=ExtResource("3_036b0")]
+position = Vector2(8816, 25)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode31" parent="Walls2" unique_id=802506273 instance=ExtResource("3_036b0")]
+position = Vector2(9336, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode32" parent="Walls2" unique_id=1912401694 instance=ExtResource("3_036b0")]
+position = Vector2(9632, 88)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode33" parent="Walls2" unique_id=1071287826 instance=ExtResource("3_036b0")]
+position = Vector2(9896, 144)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode34" parent="Walls2" unique_id=1019746299 instance=ExtResource("3_036b0")]
+position = Vector2(10120, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode35" parent="Walls2" unique_id=587872256 instance=ExtResource("3_036b0")]
+position = Vector2(10360, 190)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode36" parent="Walls2" unique_id=1231671526 instance=ExtResource("3_036b0")]
+position = Vector2(10864, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode37" parent="Walls2" unique_id=899698628 instance=ExtResource("3_036b0")]
+position = Vector2(11160, -133)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode38" parent="Walls2" unique_id=823666209 instance=ExtResource("3_036b0")]
+position = Vector2(11424, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode39" parent="Walls2" unique_id=1381021952 instance=ExtResource("3_036b0")]
+position = Vector2(11648, -141)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode40" parent="Walls2" unique_id=109594301 instance=ExtResource("3_036b0")]
+position = Vector2(11888, -31)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Walls3" type="Node2D" parent="." unique_id=202502804]
+position = Vector2(24264, 80)
+
+[node name="Wallnode" parent="Walls3" unique_id=494865600 instance=ExtResource("3_036b0")]
+position = Vector2(248, 0)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode2" parent="Walls3" unique_id=1408907443 instance=ExtResource("3_036b0")]
+position = Vector2(544, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode3" parent="Walls3" unique_id=1245813140 instance=ExtResource("3_036b0")]
+position = Vector2(808, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode4" parent="Walls3" unique_id=988992630 instance=ExtResource("3_036b0")]
+position = Vector2(1032, -56)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode5" parent="Walls3" unique_id=1480409797 instance=ExtResource("3_036b0")]
+position = Vector2(1272.0001, 54)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode6" parent="Walls3" unique_id=938458065 instance=ExtResource("3_036b0")]
+position = Vector2(1712, -120)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode7" parent="Walls3" unique_id=2119560587 instance=ExtResource("3_036b0")]
+position = Vector2(2008, -168)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode8" parent="Walls3" unique_id=344829181 instance=ExtResource("3_036b0")]
+position = Vector2(2272, -112)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode9" parent="Walls3" unique_id=1021970761 instance=ExtResource("3_036b0")]
+position = Vector2(2496, -176)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode10" parent="Walls3" unique_id=503986018 instance=ExtResource("3_036b0")]
+position = Vector2(2736, -66)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode11" parent="Walls3" unique_id=1394479938 instance=ExtResource("3_036b0")]
+position = Vector2(3136, 128)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode12" parent="Walls3" unique_id=1272158820 instance=ExtResource("3_036b0")]
+position = Vector2(3432, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode13" parent="Walls3" unique_id=1371324304 instance=ExtResource("3_036b0")]
+position = Vector2(3696, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode14" parent="Walls3" unique_id=1940735417 instance=ExtResource("3_036b0")]
+position = Vector2(3920, 72)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode15" parent="Walls3" unique_id=1618287592 instance=ExtResource("3_036b0")]
+position = Vector2(4160, 182)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode16" parent="Walls3" unique_id=1720640997 instance=ExtResource("3_036b0")]
+position = Vector2(4672, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode17" parent="Walls3" unique_id=1162721985 instance=ExtResource("3_036b0")]
+position = Vector2(4968, -40)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode18" parent="Walls3" unique_id=1383927547 instance=ExtResource("3_036b0")]
+position = Vector2(5232, 16)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode19" parent="Walls3" unique_id=315060575 instance=ExtResource("3_036b0")]
+position = Vector2(5456, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode20" parent="Walls3" unique_id=197856634 instance=ExtResource("3_036b0")]
+position = Vector2(5696, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode21" parent="Walls3" unique_id=562649528 instance=ExtResource("3_036b0")]
+position = Vector2(6208, 118)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode22" parent="Walls3" unique_id=1558121947 instance=ExtResource("3_036b0")]
+position = Vector2(6504, 70)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode23" parent="Walls3" unique_id=1614865502 instance=ExtResource("3_036b0")]
+position = Vector2(6768, 126)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode24" parent="Walls3" unique_id=1460909292 instance=ExtResource("3_036b0")]
+position = Vector2(6992, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode25" parent="Walls3" unique_id=14405320 instance=ExtResource("3_036b0")]
+position = Vector2(7232, 172)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode26" parent="Walls3" unique_id=1229774865 instance=ExtResource("3_036b0")]
+position = Vector2(7792, -29)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode27" parent="Walls3" unique_id=1590885288 instance=ExtResource("3_036b0")]
+position = Vector2(8088, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode28" parent="Walls3" unique_id=1040837011 instance=ExtResource("3_036b0")]
+position = Vector2(8352, -21)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode29" parent="Walls3" unique_id=1708457774 instance=ExtResource("3_036b0")]
+position = Vector2(8576, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode30" parent="Walls3" unique_id=1929925536 instance=ExtResource("3_036b0")]
+position = Vector2(8816, 25)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode31" parent="Walls3" unique_id=2045017105 instance=ExtResource("3_036b0")]
+position = Vector2(9336, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode32" parent="Walls3" unique_id=1552948539 instance=ExtResource("3_036b0")]
+position = Vector2(9632, 88)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode33" parent="Walls3" unique_id=312919942 instance=ExtResource("3_036b0")]
+position = Vector2(9896, 144)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode34" parent="Walls3" unique_id=1522409527 instance=ExtResource("3_036b0")]
+position = Vector2(10120, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode35" parent="Walls3" unique_id=548703331 instance=ExtResource("3_036b0")]
+position = Vector2(10360, 190)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode36" parent="Walls3" unique_id=963566327 instance=ExtResource("3_036b0")]
+position = Vector2(10864, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode37" parent="Walls3" unique_id=196942000 instance=ExtResource("3_036b0")]
+position = Vector2(11160, -133)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode38" parent="Walls3" unique_id=1469574358 instance=ExtResource("3_036b0")]
+position = Vector2(11424, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode39" parent="Walls3" unique_id=812316364 instance=ExtResource("3_036b0")]
+position = Vector2(11648, -141)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode40" parent="Walls3" unique_id=2091543667 instance=ExtResource("3_036b0")]
+position = Vector2(11888, -31)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Walls4" type="Node2D" parent="." unique_id=1708789121]
+position = Vector2(36736, 80)
+
+[node name="Wallnode" parent="Walls4" unique_id=1421558362 instance=ExtResource("3_036b0")]
+position = Vector2(248, 0)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode2" parent="Walls4" unique_id=1973900417 instance=ExtResource("3_036b0")]
+position = Vector2(544, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode3" parent="Walls4" unique_id=194543620 instance=ExtResource("3_036b0")]
+position = Vector2(808, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode4" parent="Walls4" unique_id=212144624 instance=ExtResource("3_036b0")]
+position = Vector2(1032, -56)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode5" parent="Walls4" unique_id=1120512402 instance=ExtResource("3_036b0")]
+position = Vector2(1272.0001, 54)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode6" parent="Walls4" unique_id=2000971942 instance=ExtResource("3_036b0")]
+position = Vector2(1712, -120)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode7" parent="Walls4" unique_id=1658959741 instance=ExtResource("3_036b0")]
+position = Vector2(2008, -168)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode8" parent="Walls4" unique_id=650308275 instance=ExtResource("3_036b0")]
+position = Vector2(2272, -112)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode9" parent="Walls4" unique_id=111724190 instance=ExtResource("3_036b0")]
+position = Vector2(2496, -176)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode10" parent="Walls4" unique_id=1008858270 instance=ExtResource("3_036b0")]
+position = Vector2(2736, -66)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode11" parent="Walls4" unique_id=399904315 instance=ExtResource("3_036b0")]
+position = Vector2(3136, 128)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode12" parent="Walls4" unique_id=945529030 instance=ExtResource("3_036b0")]
+position = Vector2(3432, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode13" parent="Walls4" unique_id=1765001617 instance=ExtResource("3_036b0")]
+position = Vector2(3696, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode14" parent="Walls4" unique_id=1578784122 instance=ExtResource("3_036b0")]
+position = Vector2(3920, 72)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode15" parent="Walls4" unique_id=456746969 instance=ExtResource("3_036b0")]
+position = Vector2(4160, 182)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode16" parent="Walls4" unique_id=976098388 instance=ExtResource("3_036b0")]
+position = Vector2(4672, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode17" parent="Walls4" unique_id=215457220 instance=ExtResource("3_036b0")]
+position = Vector2(4968, -40)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode18" parent="Walls4" unique_id=881827990 instance=ExtResource("3_036b0")]
+position = Vector2(5232, 16)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode19" parent="Walls4" unique_id=1517638691 instance=ExtResource("3_036b0")]
+position = Vector2(5456, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode20" parent="Walls4" unique_id=1633313035 instance=ExtResource("3_036b0")]
+position = Vector2(5696, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode21" parent="Walls4" unique_id=89105207 instance=ExtResource("3_036b0")]
+position = Vector2(6208, 118)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode22" parent="Walls4" unique_id=1502101448 instance=ExtResource("3_036b0")]
+position = Vector2(6504, 70)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode23" parent="Walls4" unique_id=135905065 instance=ExtResource("3_036b0")]
+position = Vector2(6768, 126)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode24" parent="Walls4" unique_id=645584931 instance=ExtResource("3_036b0")]
+position = Vector2(6992, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode25" parent="Walls4" unique_id=1510823269 instance=ExtResource("3_036b0")]
+position = Vector2(7232, 172)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode26" parent="Walls4" unique_id=459244309 instance=ExtResource("3_036b0")]
+position = Vector2(7792, -29)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode27" parent="Walls4" unique_id=1248552960 instance=ExtResource("3_036b0")]
+position = Vector2(8088, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode28" parent="Walls4" unique_id=136971445 instance=ExtResource("3_036b0")]
+position = Vector2(8352, -21)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode29" parent="Walls4" unique_id=885749078 instance=ExtResource("3_036b0")]
+position = Vector2(8576, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode30" parent="Walls4" unique_id=1532775385 instance=ExtResource("3_036b0")]
+position = Vector2(8816, 25)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode31" parent="Walls4" unique_id=927063190 instance=ExtResource("3_036b0")]
+position = Vector2(9336, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode32" parent="Walls4" unique_id=1605472674 instance=ExtResource("3_036b0")]
+position = Vector2(9632, 88)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode33" parent="Walls4" unique_id=966276443 instance=ExtResource("3_036b0")]
+position = Vector2(9896, 144)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode34" parent="Walls4" unique_id=1046933349 instance=ExtResource("3_036b0")]
+position = Vector2(10120, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode35" parent="Walls4" unique_id=278407675 instance=ExtResource("3_036b0")]
+position = Vector2(10360, 190)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode36" parent="Walls4" unique_id=5553166 instance=ExtResource("3_036b0")]
+position = Vector2(10864, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode37" parent="Walls4" unique_id=326843760 instance=ExtResource("3_036b0")]
+position = Vector2(11160, -133)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode38" parent="Walls4" unique_id=1915843621 instance=ExtResource("3_036b0")]
+position = Vector2(11424, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode39" parent="Walls4" unique_id=2096312356 instance=ExtResource("3_036b0")]
+position = Vector2(11648, -141)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode40" parent="Walls4" unique_id=2097289347 instance=ExtResource("3_036b0")]
+position = Vector2(11888, -31)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Walls5" type="Node2D" parent="." unique_id=1339848134]
+position = Vector2(49064, 32)
+
+[node name="Wallnode" parent="Walls5" unique_id=435301188 instance=ExtResource("3_036b0")]
+position = Vector2(248, 0)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode2" parent="Walls5" unique_id=1567041055 instance=ExtResource("3_036b0")]
+position = Vector2(544, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode3" parent="Walls5" unique_id=1003703927 instance=ExtResource("3_036b0")]
+position = Vector2(808, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode4" parent="Walls5" unique_id=979548643 instance=ExtResource("3_036b0")]
+position = Vector2(1032, -56)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode5" parent="Walls5" unique_id=1147143215 instance=ExtResource("3_036b0")]
+position = Vector2(1272.0001, 54)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode6" parent="Walls5" unique_id=557109307 instance=ExtResource("3_036b0")]
+position = Vector2(1712, -120)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode7" parent="Walls5" unique_id=804150785 instance=ExtResource("3_036b0")]
+position = Vector2(2008, -168)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode8" parent="Walls5" unique_id=651841238 instance=ExtResource("3_036b0")]
+position = Vector2(2272, -112)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode9" parent="Walls5" unique_id=994685009 instance=ExtResource("3_036b0")]
+position = Vector2(2496, -176)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode10" parent="Walls5" unique_id=1260532753 instance=ExtResource("3_036b0")]
+position = Vector2(2736, -66)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode11" parent="Walls5" unique_id=745333761 instance=ExtResource("3_036b0")]
+position = Vector2(3136, 128)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode12" parent="Walls5" unique_id=420802968 instance=ExtResource("3_036b0")]
+position = Vector2(3432, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode13" parent="Walls5" unique_id=908546145 instance=ExtResource("3_036b0")]
+position = Vector2(3696, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode14" parent="Walls5" unique_id=2015986689 instance=ExtResource("3_036b0")]
+position = Vector2(3920, 72)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode15" parent="Walls5" unique_id=1040924814 instance=ExtResource("3_036b0")]
+position = Vector2(4160, 182)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode16" parent="Walls5" unique_id=1604085196 instance=ExtResource("3_036b0")]
+position = Vector2(4672, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode17" parent="Walls5" unique_id=1778808688 instance=ExtResource("3_036b0")]
+position = Vector2(4968, -40)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode18" parent="Walls5" unique_id=836968542 instance=ExtResource("3_036b0")]
+position = Vector2(5232, 16)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode19" parent="Walls5" unique_id=1972701531 instance=ExtResource("3_036b0")]
+position = Vector2(5456, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode20" parent="Walls5" unique_id=917379084 instance=ExtResource("3_036b0")]
+position = Vector2(5696, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode21" parent="Walls5" unique_id=1344576873 instance=ExtResource("3_036b0")]
+position = Vector2(6208, 118)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode22" parent="Walls5" unique_id=1012483248 instance=ExtResource("3_036b0")]
+position = Vector2(6504, 70)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode23" parent="Walls5" unique_id=1623140793 instance=ExtResource("3_036b0")]
+position = Vector2(6768, 126)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode24" parent="Walls5" unique_id=651686315 instance=ExtResource("3_036b0")]
+position = Vector2(6992, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode25" parent="Walls5" unique_id=722672544 instance=ExtResource("3_036b0")]
+position = Vector2(7232, 172)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode26" parent="Walls5" unique_id=327573279 instance=ExtResource("3_036b0")]
+position = Vector2(7792, -29)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode27" parent="Walls5" unique_id=938094389 instance=ExtResource("3_036b0")]
+position = Vector2(8088, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode28" parent="Walls5" unique_id=1718285341 instance=ExtResource("3_036b0")]
+position = Vector2(8352, -21)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode29" parent="Walls5" unique_id=1887304344 instance=ExtResource("3_036b0")]
+position = Vector2(8576, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode30" parent="Walls5" unique_id=292708404 instance=ExtResource("3_036b0")]
+position = Vector2(8816, 25)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode31" parent="Walls5" unique_id=936154963 instance=ExtResource("3_036b0")]
+position = Vector2(9336, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode32" parent="Walls5" unique_id=2066975248 instance=ExtResource("3_036b0")]
+position = Vector2(9632, 88)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode33" parent="Walls5" unique_id=969672156 instance=ExtResource("3_036b0")]
+position = Vector2(9896, 144)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode34" parent="Walls5" unique_id=594685515 instance=ExtResource("3_036b0")]
+position = Vector2(10120, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode35" parent="Walls5" unique_id=1384076829 instance=ExtResource("3_036b0")]
+position = Vector2(10360, 190)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode36" parent="Walls5" unique_id=2122880985 instance=ExtResource("3_036b0")]
+position = Vector2(10864, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode37" parent="Walls5" unique_id=651574305 instance=ExtResource("3_036b0")]
+position = Vector2(11160, -133)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode38" parent="Walls5" unique_id=530194188 instance=ExtResource("3_036b0")]
+position = Vector2(11424, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode39" parent="Walls5" unique_id=325151170 instance=ExtResource("3_036b0")]
+position = Vector2(11648, -141)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode40" parent="Walls5" unique_id=1755913634 instance=ExtResource("3_036b0")]
+position = Vector2(11888, -31)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Walls6" type="Node2D" parent="." unique_id=529968235]
+position = Vector2(61264, 59)
+
+[node name="Wallnode" parent="Walls6" unique_id=974098961 instance=ExtResource("3_036b0")]
+position = Vector2(248, 0)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode2" parent="Walls6" unique_id=604633350 instance=ExtResource("3_036b0")]
+position = Vector2(544, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode3" parent="Walls6" unique_id=1459511847 instance=ExtResource("3_036b0")]
+position = Vector2(808, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode4" parent="Walls6" unique_id=2055253129 instance=ExtResource("3_036b0")]
+position = Vector2(1032, -56)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode5" parent="Walls6" unique_id=518211537 instance=ExtResource("3_036b0")]
+position = Vector2(1272.0001, 54)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode6" parent="Walls6" unique_id=1957351848 instance=ExtResource("3_036b0")]
+position = Vector2(1712, -120)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode7" parent="Walls6" unique_id=858886210 instance=ExtResource("3_036b0")]
+position = Vector2(2008, -168)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode8" parent="Walls6" unique_id=1205653072 instance=ExtResource("3_036b0")]
+position = Vector2(2272, -112)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode9" parent="Walls6" unique_id=109927549 instance=ExtResource("3_036b0")]
+position = Vector2(2496, -176)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode10" parent="Walls6" unique_id=1525728700 instance=ExtResource("3_036b0")]
+position = Vector2(2736, -66)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode11" parent="Walls6" unique_id=1168398218 instance=ExtResource("3_036b0")]
+position = Vector2(3136, 128)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode12" parent="Walls6" unique_id=1800736645 instance=ExtResource("3_036b0")]
+position = Vector2(3432, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode13" parent="Walls6" unique_id=1964287703 instance=ExtResource("3_036b0")]
+position = Vector2(3696, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode14" parent="Walls6" unique_id=2097164534 instance=ExtResource("3_036b0")]
+position = Vector2(3920, 72)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode15" parent="Walls6" unique_id=33335133 instance=ExtResource("3_036b0")]
+position = Vector2(4160, 182)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode16" parent="Walls6" unique_id=1500620108 instance=ExtResource("3_036b0")]
+position = Vector2(4672, 8)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode17" parent="Walls6" unique_id=2002148268 instance=ExtResource("3_036b0")]
+position = Vector2(4968, -40)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode18" parent="Walls6" unique_id=1401586245 instance=ExtResource("3_036b0")]
+position = Vector2(5232, 16)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode19" parent="Walls6" unique_id=2056172911 instance=ExtResource("3_036b0")]
+position = Vector2(5456, -48)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode20" parent="Walls6" unique_id=749912432 instance=ExtResource("3_036b0")]
+position = Vector2(5696, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode21" parent="Walls6" unique_id=1188963201 instance=ExtResource("3_036b0")]
+position = Vector2(6208, 118)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode22" parent="Walls6" unique_id=1649905814 instance=ExtResource("3_036b0")]
+position = Vector2(6504, 70)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode23" parent="Walls6" unique_id=922481781 instance=ExtResource("3_036b0")]
+position = Vector2(6768, 126)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode24" parent="Walls6" unique_id=813279031 instance=ExtResource("3_036b0")]
+position = Vector2(6992, 62)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode25" parent="Walls6" unique_id=352254579 instance=ExtResource("3_036b0")]
+position = Vector2(7232, 172)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode26" parent="Walls6" unique_id=529062330 instance=ExtResource("3_036b0")]
+position = Vector2(7792, -29)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode27" parent="Walls6" unique_id=218835809 instance=ExtResource("3_036b0")]
+position = Vector2(8088, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode28" parent="Walls6" unique_id=1218075575 instance=ExtResource("3_036b0")]
+position = Vector2(8352, -21)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode29" parent="Walls6" unique_id=1457458593 instance=ExtResource("3_036b0")]
+position = Vector2(8576, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode30" parent="Walls6" unique_id=2079307197 instance=ExtResource("3_036b0")]
+position = Vector2(8816, 25)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode31" parent="Walls6" unique_id=744312321 instance=ExtResource("3_036b0")]
+position = Vector2(9336, 136)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode32" parent="Walls6" unique_id=300784606 instance=ExtResource("3_036b0")]
+position = Vector2(9632, 88)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode33" parent="Walls6" unique_id=351241598 instance=ExtResource("3_036b0")]
+position = Vector2(9896, 144)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode34" parent="Walls6" unique_id=1595059464 instance=ExtResource("3_036b0")]
+position = Vector2(10120, 80)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode35" parent="Walls6" unique_id=2124543261 instance=ExtResource("3_036b0")]
+position = Vector2(10360, 190)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode36" parent="Walls6" unique_id=27466800 instance=ExtResource("3_036b0")]
+position = Vector2(10864, -85)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode37" parent="Walls6" unique_id=775832502 instance=ExtResource("3_036b0")]
+position = Vector2(11160, -133)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode38" parent="Walls6" unique_id=169918283 instance=ExtResource("3_036b0")]
+position = Vector2(11424, -77)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode39" parent="Walls6" unique_id=427790937 instance=ExtResource("3_036b0")]
+position = Vector2(11648, -141)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Wallnode40" parent="Walls6" unique_id=474696215 instance=ExtResource("3_036b0")]
+position = Vector2(11808, 517)
+scale = Vector2(1.9107668, 1.8309779)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1011076095]
+z_index = -3
+position = Vector2(2888.0002, 24)
+scale = Vector2(29.760004, 17.840002)
+texture = ExtResource("4_aqk2v")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1865331603]
+z_index = -3
+position = Vector2(11064, 32)
+scale = Vector2(29.760004, 17.840002)
+texture = ExtResource("4_aqk2v")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1626230972]
+z_index = -3
+position = Vector2(18928, 64)
+scale = Vector2(29.760004, 17.840002)
+texture = ExtResource("4_aqk2v")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1116148679]
+z_index = -3
+position = Vector2(26871.998, 99)
+scale = Vector2(29.760004, 17.840002)
+texture = ExtResource("4_aqk2v")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=428698908]
+z_index = -3
+position = Vector2(34936, 180)
+scale = Vector2(29.760004, 17.840002)
+texture = ExtResource("4_aqk2v")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=724621710]
+z_index = -3
+position = Vector2(43096, 136.00002)
+scale = Vector2(29.760004, 17.840002)
+texture = ExtResource("4_aqk2v")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=2089235451]
+z_index = -3
+position = Vector2(51184, 136)
+scale = Vector2(29.760004, 17.840002)
+texture = ExtResource("4_aqk2v")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=157543377]
+z_index = -3
+position = Vector2(59215.996, 136)
+scale = Vector2(29.760004, 17.840002)
+texture = ExtResource("4_aqk2v")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=326654964]
+z_index = -3
+position = Vector2(67256, 136)
+scale = Vector2(29.760004, 17.840002)
+texture = ExtResource("4_aqk2v")
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=797686104]
+z_index = -3
+position = Vector2(75247.99, 136)
+scale = Vector2(29.760004, 17.840002)
+texture = ExtResource("4_aqk2v")
+
+[connection signal="area_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_area_entered"]
+[connection signal="body_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_body_entered"]
+[connection signal="body_entered" from="PlayerNode/Player/Resetter" to="PlayerNode/Player" method="_on_resetter_body_entered"]
